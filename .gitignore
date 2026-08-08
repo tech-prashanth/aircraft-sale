@@ -1,0 +1,36 @@
+# Environment variables
+.env
+*.env
+backend/.env
+frontend/.env
+
+# SQLite Databases
+*.db
+database.db
+backend/database.db
+
+# Sensitive / Google Services config
+google-services*.json
+
+# Dependencies & Build artifacts
+node_modules/
+dist/
+build/
+
+# Python Cache & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# IDE & System Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Tool / Agent metadata
+.gemini/
+.system_generated/

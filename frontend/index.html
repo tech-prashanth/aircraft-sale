@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanguard Aviation | Private Jet Sales & Brokerage</title>
+    <meta name="description" content="Discover executive private jets for sale with Vanguard Aviation. Bespoke acquisitions, strategic sales, and expert advisory services for global leaders.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Vercel Web Analytics -->
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-jet-fighter-up gold-text"></i>
+                <span class="logo-text">VANGUARD<span class="light-text">AVIATION</span></span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#fleet" class="nav-link">Fleet</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#valuation" class="nav-link">Valuation</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#contact" class="nav-link contact-btn-mobile">Consultation</a>
+                <a href="#" class="nav-link contact-btn-mobile" id="clientPortalBtnMobile">Client Portal</a>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="#" class="btn btn-outline" id="clientPortalBtn">Client Portal</a>
+                <a href="#contact" class="btn btn-outline header-cta">Request Consultation</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-bg" style="background-image: linear-gradient(180deg, rgba(10, 10, 12, 0.4) 0%, rgba(10, 10, 12, 0.95) 100%), url('assets/hero_jet.png');"></div>
+        <div class="container hero-container">
+            <div class="hero-content scroll-reveal">
+                <span class="badge">Aircraft Sales & Acquisitions</span>
+                <h1>Private Aviation <br><span class="gold-gradient-text">Redefined</span></h1>
+                <p class="hero-subtitle">Bespoke acquisition, transaction management, and strategic off-market divestment for private aircraft owners worldwide.</p>
+                
+                <div class="search-widget glass-card">
+                    <div class="search-field">
+                        <label><i class="fa-solid fa-plane-departure"></i> Category</label>
+                        <select id="filterCategory">
+                            <option value="all">All Categories</option>
+                            <option value="ultra-long">Ultra Long Range</option>
+                            <option value="large">Large Cabin</option>
+                            <option value="super-mid">Super Mid-Size</option>
+                        </select>
+                    </div>
+                    <div class="search-field">
+                        <label><i class="fa-solid fa-industry"></i> Manufacturer</label>
+                        <select id="filterManufacturer">
+                            <option value="all">All Manufacturers</option>
+                            <option value="gulfstream">Gulfstream</option>
+                            <option value="bombardier">Bombardier</option>
+                            <option value="dassault">Dassault</option>
+                            <option value="cessna">Cessna</option>
+                            <option value="embraer">Embraer</option>
+                        </select>
+                    </div>
+                    <div class="search-field">
+                        <label><i class="fa-solid fa-tag"></i> Availability</label>
+                        <select id="filterStatus">
+                            <option value="all">Any Status</option>
+                            <option value="immediate">Immediate Sale</option>
+                            <option value="off-market">Off-Market Opportunity</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-gold search-btn" id="applyFiltersBtn">
+                        <span>Search Inventory</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="fleet" class="fleet-section section-padding">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <span class="section-title-badge">CURRENT FLEET</span>
+                <h2>Aircraft Search Portal</h2>
+                <div class="header-line"></div>
+                <p class="section-desc">Filter our active registry by specifications, price limits, and manufacturer options.</p>
+            </div>
+
+            <div class="search-portal-container">
+                <aside class="search-sidebar glass-card scroll-reveal">
+                    <div class="sidebar-block">
+                        <label class="sidebar-label">Keywords</label>
+                        <div class="search-input-wrapper">
+                            <input type="text" id="sidebarSearchQuery" placeholder="Search G650, Global, Falcon...">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-block">
+                        <label class="sidebar-label">Category</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="category-checkbox" value="ultra-long" checked>
+                                <span class="checkmark"></span> Ultra Long Range
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="category-checkbox" value="large" checked>
+                                <span class="checkmark"></span> Large Cabin
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="category-checkbox" value="super-mid" checked>
+                                <span class="checkmark"></span> Super Mid-Size
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-block">
+                        <label class="sidebar-label">Manufacturer</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="manufacturer-checkbox" value="gulfstream" checked>
+                                <span class="checkmark"></span> Gulfstream
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="manufacturer-checkbox" value="bombardier" checked>
+                                <span class="checkmark"></span> Bombardier
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="manufacturer-checkbox" value="dassault" checked>
+                                <span class="checkmark"></span> Dassault
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="manufacturer-checkbox" value="cessna" checked>
+                                <span class="checkmark"></span> Cessna
+                            </label>
+                            <label class="checkbox-container">
+                                <input type="checkbox" class="manufacturer-checkbox" value="embraer" checked>
+                                <span class="checkmark"></span> Embraer
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-block">
+                        <div class="control-labels">
+                            <span class="control-name">Max Price</span>
+                            <span class="control-output-text" id="priceFilterLabel">₹680 Cr</span>
+                        </div>
+                        <input type="range" min="1200000000" max="6800000000" step="100000000" value="6800000000" class="slider" id="sidebarPriceMax">
+                    </div>
+
+                    <button class="btn btn-outline btn-full reset-btn" id="resetFiltersBtn">Reset Filters</button>
+                </aside>
+
+                <div class="search-results-panel scroll-reveal">
+                    <div class="results-header">
+                        <span class="results-count" id="resultsCount">Showing 6 Aircraft</span>
+                        <div class="sort-wrapper">
+                            <label for="sortBy">Sort By</label>
+                            <select id="sortBy">
+                                <option value="default">Featured</option>
+                                <option value="price-desc">Price: High to Low</option>
+                                <option value="price-asc">Price: Low to High</option>
+                                <option value="hours-asc">Hours: Low to High</option>
+                                <option value="range-desc">Range: Long to Short</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="fleet-grid" id="fleetGrid">
+                        <div class="fleet-card glass-card" data-category="ultra-long" data-manufacturer="gulfstream" data-status="immediate" data-price="4855500000" data-hours="840" data-range="7500">
+                            <div class="card-img-wrapper">
+                                <img src="assets/hero_jet.png" alt="Gulfstream G650ER" class="card-img">
+                                <span class="card-tag tag-immediate">Immediate Delivery</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="aircraft-title">Gulfstream G650ER</h3>
+                                <p class="aircraft-subtitle">Year: 2021</p>
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Max Range</span>
+                                        <span class="spec-value">7,500 nm</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Max Speed</span>
+                                        <span class="spec-value">Mach 0.925</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Capacity</span>
+                                        <span class="spec-value">16 Pax</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Hours</span>
+                                        <span class="spec-value">840 hrs</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span class="price-label">Valuation</span>
+                                    <span class="price-value">₹4,85,55,00,000</span>
+                                    <button class="btn btn-gold btn-full view-details-btn" data-jet="g650er">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fleet-card glass-card" data-category="ultra-long" data-manufacturer="bombardier" data-status="off-market" data-price="5976000000" data-hours="490" data-range="7700">
+                            <div class="card-img-wrapper">
+                                <img src="assets/global7500_ext.png" alt="Bombardier Global 7500" class="card-img">
+                                <span class="card-tag tag-off-market">Off-Market</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="aircraft-title">Bombardier Global 7500</h3>
+                                <p class="aircraft-subtitle">Year: 2022</p>
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Max Range</span>
+                                        <span class="spec-value">7,700 nm</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Max Speed</span>
+                                        <span class="spec-value">Mach 0.925</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Capacity</span>
+                                        <span class="spec-value">19 Pax</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Hours</span>
+                                        <span class="spec-value">490 hrs</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span class="price-label">Valuation</span>
+                                    <span class="price-value">₹5,97,60,00,000</span>
+                                    <button class="btn btn-gold btn-full view-details-btn" data-jet="global7500">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fleet-card glass-card" data-category="large" data-manufacturer="dassault" data-status="immediate" data-price="3311700000" data-hours="1250" data-range="6450">
+                            <div class="card-img-wrapper">
+                                <img src="assets/falcon8x_ext.png" alt="Dassault Falcon 8X" class="card-img">
+                                <span class="card-tag tag-immediate">Immediate Delivery</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="aircraft-title">Dassault Falcon 8X</h3>
+                                <p class="aircraft-subtitle">Year: 2019</p>
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Max Range</span>
+                                        <span class="spec-value">6,450 nm</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Max Speed</span>
+                                        <span class="spec-value">Mach 0.90</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Capacity</span>
+                                        <span class="spec-value">14 Pax</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Hours</span>
+                                        <span class="spec-value">1,250 hrs</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span class="price-label">Valuation</span>
+                                    <span class="price-value">₹3,31,17,00,000</span>
+                                    <button class="btn btn-gold btn-full view-details-btn" data-jet="falcon8x">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fleet-card glass-card" data-category="super-mid" data-manufacturer="bombardier" data-status="immediate" data-price="1859200000" data-hours="1120" data-range="3200">
+                            <div class="card-img-wrapper">
+                                <img src="assets/challenger350.png" alt="Bombardier Challenger 350" class="card-img">
+                                <span class="card-tag tag-immediate">Immediate Delivery</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="aircraft-title">Bombardier Challenger 350</h3>
+                                <p class="aircraft-subtitle">Year: 2020</p>
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Max Range</span>
+                                        <span class="spec-value">3,200 nm</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Max Speed</span>
+                                        <span class="spec-value">Mach 0.83</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Capacity</span>
+                                        <span class="spec-value">9 Pax</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Hours</span>
+                                        <span class="spec-value">1,120 hrs</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span class="price-label">Valuation</span>
+                                    <span class="price-value">₹1,85,92,00,000</span>
+                                    <button class="btn btn-gold btn-full view-details-btn" data-jet="challenger350">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fleet-card glass-card" data-category="large" data-manufacturer="cessna" data-status="off-market" data-price="1568700000" data-hours="1480" data-range="2700">
+                            <div class="card-img-wrapper">
+                                <img src="assets/citation_lat.png" alt="Cessna Citation Latitude" class="card-img">
+                                <span class="card-tag tag-off-market">Off-Market</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="aircraft-title">Cessna Citation Latitude</h3>
+                                <p class="aircraft-subtitle">Year: 2018</p>
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Max Range</span>
+                                        <span class="spec-value">2,700 nm</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Max Speed</span>
+                                        <span class="spec-value">Mach 0.80</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Capacity</span>
+                                        <span class="spec-value">8 Pax</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Hours</span>
+                                        <span class="spec-value">1,480 hrs</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span class="price-label">Valuation</span>
+                                    <span class="price-value">₹1,56,87,00,000</span>
+                                    <button class="btn btn-gold btn-full view-details-btn" data-jet="citation_lat">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fleet-card glass-card" data-category="super-mid" data-manufacturer="embraer" data-status="immediate" data-price="1743000000" data-hours="320" data-range="4018">
+                            <div class="card-img-wrapper">
+                                <img src="assets/praetor600.png" alt="Embraer Praetor 600" class="card-img">
+                                <span class="card-tag tag-immediate">Immediate Delivery</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="aircraft-title">Embraer Praetor 600</h3>
+                                <p class="aircraft-subtitle">Year: 2023</p>
+                                <div class="specs-grid">
+                                    <div class="spec-item">
+                                        <span class="spec-label">Max Range</span>
+                                        <span class="spec-value">4,018 nm</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Max Speed</span>
+                                        <span class="spec-value">Mach 0.83</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Capacity</span>
+                                        <span class="spec-value">12 Pax</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <span class="spec-label">Hours</span>
+                                        <span class="spec-value">320 hrs</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span class="price-label">Valuation</span>
+                                    <span class="price-value">₹1,74,30,00,000</span>
+                                    <button class="btn btn-gold btn-full view-details-btn" data-jet="praetor600">View Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section section-padding">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <span class="section-title-badge">MEDIA GALLERY</span>
+                <h2>Aviation Showcase</h2>
+                <div class="header-line"></div>
+                <p class="section-desc">A visual collection of our ultra-luxury private aircraft in action around the world.</p>
+            </div>
+
+            <div class="gallery-grid scroll-reveal">
+                <div class="gallery-item" data-img-src="assets/gallery_takeoff.png">
+                    <img src="assets/gallery_takeoff.png" alt="Private Jet Takeoff" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        <span>Sunset Takeoff</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-img-src="assets/gallery_formation.png">
+                    <img src="assets/gallery_formation.png" alt="Executive Jets flying in formation" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        <span>Formation Cruise</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-img-src="assets/gallery_front.png">
+                    <img src="assets/gallery_front.png" alt="Sleek Business Jet on Wet Tarmac" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        <span>Twilight Runway</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-img-src="assets/gallery_hangar.png">
+                    <img src="assets/gallery_hangar.png" alt="Aircraft Inside Corporate Hangar" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        <span>Private Hangar</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-img-src="assets/hero_jet.png">
+                    <img src="assets/hero_jet.png" alt="Gulfstream G650ER on tarmac" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        <span>Gulfstream Tarmac</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-img-src="assets/global7500_ext.png">
+                    <img src="assets/global7500_ext.png" alt="Bombardier Global 7500 flying" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        <span>Global 7500 Altitude</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-img-src="assets/cabin_interior.png">
+                    <img src="assets/cabin_interior.png" alt="Luxury Jet Cabin Interior" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        <span>Nuage Cabin Refinement</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-img-src="assets/cockpit_view.png">
+                    <img src="assets/cockpit_view.png" alt="State of the art Cockpit Avionics" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        <span>Symmetry Flight Deck</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="valuation" class="valuation-section section-padding">
+        <div class="container">
+            <div class="valuation-wrapper glass-card scroll-reveal">
+                <div class="valuation-info">
+                    <span class="badge">Market Analysis</span>
+                    <h2>Jet Valuation & Cost Estimator</h2>
+                    <p>Obtain an instant estimation of standard acquisition and annual operating costs based on class specifications, manufacture date, and expected utilization.</p>
+                    
+                    <div class="estimator-controls">
+                        <div class="control-group">
+                            <div class="control-labels">
+                                <span class="control-name">Aircraft Category</span>
+                                <span class="control-output-text" id="calcCategoryLabel">Ultra Long Range Jet</span>
+                            </div>
+                            <input type="range" min="1" max="4" value="4" class="slider" id="calcCategory">
+                            <div class="slider-ticks">
+                                <span>Light Jet</span>
+                                <span>Midsize</span>
+                                <span>Super Mid</span>
+                                <span>Ultra Long</span>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <div class="control-labels">
+                                <span class="control-name">Aircraft Age</span>
+                                <span class="control-output-text" id="calcAgeLabel">Brand New (2026)</span>
+                            </div>
+                            <input type="range" min="2010" max="2026" value="2026" class="slider" id="calcAge">
+                            <div class="slider-ticks">
+                                <span>2010 (Older)</span>
+                                <span>2018</span>
+                                <span>2026 (New)</span>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <div class="control-labels">
+                                <span class="control-name">Annual Flight Hours</span>
+                                <span class="control-output-text" id="calcHoursLabel">300 hrs / yr</span>
+                            </div>
+                            <input type="range" min="100" max="800" step="50" value="300" class="slider" id="calcHours">
+                            <div class="slider-ticks">
+                                <span>100 hrs</span>
+                                <span>450 hrs</span>
+                                <span>800 hrs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="valuation-results">
+                    <h3>Estimated Financial Profile</h3>
+                    <div class="results-line"></div>
+                    
+                    <div class="result-card">
+                        <span class="result-title">Estimated Acquisition Price</span>
+                        <span class="result-number gold-gradient-text" id="resAcquisitionPrice">₹5,40,00,00,000</span>
+                        <span class="result-info">Estimate based on current configuration and active market comps.</span>
+                    </div>
+
+                    <div class="result-meta">
+                        <div class="meta-item">
+                            <span class="meta-title">Direct Hourly Operating Cost</span>
+                            <span class="meta-value" id="resHourlyCost">₹3,73,500 / hr</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-title">Annual Operating Budget</span>
+                            <span class="meta-value" id="resAnnualFixed">₹7,05,50,000</span>
+                        </div>
+                    </div>
+
+                    <div class="results-cta">
+                        <a href="#contact" class="btn btn-gold btn-full text-center">Request Detailed Appraisal</a>
+                        <p class="disclaimer"><i class="fa-solid fa-triangle-exclamation"></i> Financial estimations are projections. Final appraisals depend on complete logbook review.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience-section section-padding">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <span class="section-title-badge">VIP Configuration</span>
+                <h2>The Cabin Experience</h2>
+                <div class="header-line"></div>
+                <p class="section-desc">Every flight profile requires the right layout. We source aircraft tailored precisely for connectivity, rest, and cockpit safety.</p>
+            </div>
+
+            <div class="experience-grid">
+                <div class="experience-card scroll-reveal">
+                    <div class="exp-img-wrapper">
+                        <img src="assets/cabin_interior.png" alt="Cabin Interior" class="exp-img">
+                    </div>
+                    <div class="exp-content">
+                        <h3>Cabin Refinement</h3>
+                        <p>Fully soundproofed cabins featuring high-speed satellite Wi-Fi, ambient air filtration systems, and bespoke culinary configurations.</p>
+                        <ul class="exp-features">
+                            <li><i class="fa-solid fa-check gold-text"></i> Fully adjustable leather seating</li>
+                            <li><i class="fa-solid fa-check gold-text"></i> Dedicated galley configurations</li>
+                            <li><i class="fa-solid fa-check gold-text"></i> Enhanced acoustic soundproofing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-card scroll-reveal">
+                    <div class="exp-img-wrapper">
+                        <img src="assets/cockpit_view.png" alt="Avionics Cockpit" class="exp-img">
+                    </div>
+                    <div class="exp-content">
+                        <h3>Advanced Safety & Avionics</h3>
+                        <p>Advanced flight guidance technology, autothrottle integration, and weather detection systems ensure safe operation under all flight conditions.</p>
+                        <ul class="exp-features">
+                            <li><i class="fa-solid fa-check gold-text"></i> Enhanced Vision Systems (EVS)</li>
+                            <li><i class="fa-solid fa-check gold-text"></i> Fly-by-wire flight control integration</li>
+                            <li><i class="fa-solid fa-check gold-text"></i> Fully compliant tracking equipment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section section-padding">
+        <div class="container">
+            <div class="section-header text-center scroll-reveal">
+                <span class="section-title-badge">Our Services</span>
+                <h2>Brokerage & Advisory</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="services-grid scroll-reveal">
+                <div class="service-card glass-card">
+                    <div class="service-icon-box">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </div>
+                    <h3>Acquisition Advisory</h3>
+                    <p>We analyze global markets and registries to source aircraft, frequently securing private assets before they hit the open market.</p>
+                </div>
+
+                <div class="service-card glass-card">
+                    <div class="service-icon-box">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3>Transaction Support</h3>
+                    <p>From pre-purchase technical inspections at authorized service centers to international registration and escrow management.</p>
+                </div>
+
+                <div class="service-card glass-card">
+                    <div class="service-icon-box">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3>Strategic Sales</h3>
+                    <p>Positioning your aircraft for peak resale value through quiet marketing campaigns directed at qualified institutional and private buyers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info scroll-reveal">
+                    <span class="badge">Inquiries</span>
+                    <h2>Discuss Your Requirements</h2>
+                    <p>Whether acquiring a midsize jet or listing an entire corporate fleet, our partners handle all consultations with strict confidentiality.</p>
+                    
+                    <div class="contact-details">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Airport+Road,+Meenambakkam,+Chennai,+Tamil+Nadu+600027" target="_blank" rel="noopener noreferrer" class="detail-item detail-item-link" title="Open location in Google Maps">
+                            <i class="fa-solid fa-location-dot gold-text"></i>
+                            <div>
+                                <h4>Headquarters</h4>
+                                <p>Airport Road, Meenambakkam, Chennai, Tamil Nadu 600027 <i class="fa-solid fa-arrow-up-right-from-square external-icon"></i></p>
+                            </div>
+                        </a>
+                        <a href="tel:+917200070033" class="detail-item detail-item-link" title="Call Headquarters">
+                            <i class="fa-solid fa-phone-volume gold-text"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 72000 70033</p>
+                            </div>
+                        </a>
+                        <a href="mailto:aircraftsaleslanding@gmail.com" class="detail-item detail-item-link" title="Send Email">
+                            <i class="fa-solid fa-envelope-open-text gold-text"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>aircraftsaleslanding@gmail.com</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-container glass-card scroll-reveal">
+                    <form id="inquiryForm" class="contact-form">
+                        <h3 class="form-title">Consultation Request</h3>
+                        <p class="form-desc">Provide your information below. Our team will contact you within two business hours.</p>
+                        
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" placeholder="Alexander Mercer" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input type="text" id="company" placeholder="Mercer Enterprises">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Corporate Email</label>
+                            <input type="email" id="email" placeholder="alexander@mercer.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interest">Primary Interest</label>
+                            <select id="interest">
+                                <option value="buy">Acquiring an aircraft</option>
+                                <option value="sell">Selling an aircraft</option>
+                                <option value="valuation">Appraisal & valuation</option>
+                                <option value="charter-yield">Charter solutions</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="4" placeholder="Describe your requirements..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-gold btn-full submit-btn">
+                            <span class="btn-text">Submit Inquiry</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                        
+                        <div id="formFeedback" class="form-feedback hidden"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i class="fa-solid fa-jet-fighter-up gold-text"></i>
+                        <span class="logo-text">VANGUARD<span class="light-text">AVIATION</span></span>
+                    </a>
+                    <p class="footer-about-text">Vanguard Aviation Group is a registered aircraft brokerage firm specializing in private aircraft transactions and off-market listings.</p>
+                </div>
+                <div class="footer-links-grid">
+                    <div class="links-column">
+                        <h4>Navigation</h4>
+                        <a href="#hero">Home</a>
+                        <a href="#fleet">Fleet</a>
+                        <a href="#valuation">Valuation</a>
+                        <a href="#experience">Experience</a>
+                    </div>
+                    <div class="links-column">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Regulatory Disclosures</a>
+                    </div>
+                    <div class="links-column">
+                        <h4>Follow</h4>
+                        <div class="social-row">
+                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vanguard Aviation Group. All rights reserved. All transactions are subject to final contract execution.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="detailsModal" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Close details">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-body-content"></div>
+        </div>
+    </div>
+
+    <!-- Client Portal Auth Modal -->
+    <div id="authModal" class="modal-overlay">
+        <div class="modal-content auth-modal-content glass-card">
+            <button class="modal-close" id="authModalCloseBtn" aria-label="Close Portal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <div class="auth-box">
+                <div class="auth-tabs" id="authTabsHeader">
+                    <button class="auth-tab active" data-tab="login">Log In</button>
+                    <button class="auth-tab" data-tab="signup">Sign Up</button>
+                </div>
+
+                <!-- Tab 1: Log In -->
+                <div class="auth-tab-content active" id="tab-login">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="loginEmail">Email Address</label>
+                            <input type="email" id="loginEmail" placeholder="yourname@domain.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" placeholder="Enter password" required>
+                        </div>
+                        <button type="submit" class="btn btn-gold btn-full">
+                            <span class="btn-text">Request Verification Code</span>
+                            <i class="fa-solid fa-key"></i>
+                        </button>
+                    </form>
+                    <div id="loginFeedback" class="form-feedback hidden"></div>
+                </div>
+
+                <!-- Tab 2: Sign Up -->
+                <div class="auth-tab-content" id="tab-signup">
+                    <form id="signupForm">
+                        <div class="form-group">
+                            <label for="signupName">Full Name</label>
+                            <input type="text" id="signupName" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupEmail">Email Address</label>
+                            <input type="email" id="signupEmail" placeholder="yourname@domain.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <input type="password" id="signupPassword" placeholder="Choose Password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPhone">Phone Number</label>
+                            <input type="tel" id="signupPhone" placeholder="Mobile Number" required>
+                        </div>
+                        <button type="submit" class="btn btn-gold btn-full">
+                            <span class="btn-text">Register Account</span>
+                            <i class="fa-solid fa-user-plus"></i>
+                        </button>
+                    </form>
+                    <div id="signupFeedback" class="form-feedback hidden"></div>
+                </div>
+
+                <!-- Tab 3: OTP Verification -->
+                <div class="auth-tab-content" id="tab-otp">
+                    <div class="otp-verification-header">
+                        <h3>Enter Verification Code</h3>
+                        <p>We've sent a 6-digit OTP code to verify your identity. The code changes every 1 minute.</p>
+                    </div>
+                    <form id="otpForm">
+                        <div class="otp-input-row">
+                            <input type="text" id="otpCode" placeholder="0 0 0 0 0 0" maxlength="6" required>
+                        </div>
+                        
+                        <div class="otp-timer-container">
+                            <span>Code expires in: <strong id="otpTimer">60s</strong></span>
+                        </div>
+
+                        <div class="demo-otp-banner">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <p>Verification Code: <strong id="demoOtpDisplay">------</strong></p>
+                        </div>
+
+                        <button type="submit" class="btn btn-gold btn-full">
+                            <span class="btn-text">Verify & Log In</span>
+                            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        </button>
+                    </form>
+                    <div id="otpFeedback" class="form-feedback hidden"></div>
+                </div>
+
+                <!-- Tab 4: Dashboard -->
+                <div class="auth-tab-content" id="tab-dashboard">
+                    <div class="dashboard-header">
+                        <div class="avatar-box">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <h3 id="dashboardWelcome">Welcome Back</h3>
+                        <p class="dashboard-badge">Verified Investor</p>
+                    </div>
+                    
+                    <div class="dashboard-profile-details">
+                        <div class="profile-item">
+                            <span class="profile-label">Email</span>
+                            <span class="profile-value" id="profileEmail">-</span>
+                        </div>
+                        <div class="profile-item">
+                            <span class="profile-label">Phone</span>
+                            <span class="profile-value" id="profilePhone">-</span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-outline btn-full" id="logoutBtn">
+                        <span>Log Out</span>
+                        <i class="fa-solid fa-power-off"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase Web SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
