@@ -7,7 +7,7 @@ import ssl
 import sys
 
 OWNER = os.environ.get("GITHUB_OWNER", "tech-prashanth")
-REPO = os.environ.get("GITHUB_REPO", "aircraft-sales")
+REPO = os.environ.get("GITHUB_REPO", "aircraft-sale")
 BRANCH = os.environ.get("GITHUB_BRANCH", "main")
 
 def make_request(url, method, headers, data=None):
